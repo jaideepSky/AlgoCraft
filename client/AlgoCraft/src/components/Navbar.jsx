@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import {  useDispatch,useSelector } from 'react-redux';
 import { darkMode, lightMode } from '../redux/slices/themeSlice';
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,9 +39,12 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#problems" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <Link to="/" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/problems" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Problems
-            </a>
+            </Link>
             <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Contest
             </a>
@@ -81,9 +85,12 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
-            <a href="#problems" className="block text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <Link to="/" className="block text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/problems" className="block text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Problems
-            </a>
+            </Link>
             <a href="#" className="block text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Contest
             </a>

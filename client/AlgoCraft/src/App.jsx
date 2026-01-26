@@ -6,15 +6,15 @@ function App() {
 
   return (
     <>
-     <div className="min-h-screen bg-gray-950">
-      <Navbar />
-      <main className="min-h-screen">
-          <Outlet/>
-      </main>
-      <Footer />
-    </div>
+    
   
-   
+   <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
+        <Navbar />
+        <main className="min-h-screen">
+           <Outlet/>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
