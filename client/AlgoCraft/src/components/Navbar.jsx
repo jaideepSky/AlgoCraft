@@ -9,13 +9,14 @@ import { Link } from 'react-router-dom';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const { theme, toggleTheme } = useTheme();
+  
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
 
   useEffect(()=>{
     document.querySelector('html').classList.remove('light','dark');
     document.querySelector('html').classList.add(theme);
+    localStorage.setItem('theme',theme);
   },[theme])
 
   const toggleTheme = ()=>{
